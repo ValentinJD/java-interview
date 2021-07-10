@@ -229,7 +229,6 @@ Dispatcher-servlet-diagram
 @Service указывает, что класс является сервисом для реализации бизнес логики (на самом деле не отличается от Component, но просто помогает разработчику указать смысловую нагрузку класса).
 
 Для указания контейнеру на класс-бин можно использовать любую из этих аннотаций. Но различные имена позволяют различать назначение того или иного класса.
-
 ### 22. Расскажите, что вы знаете о DispatcherServlet и ContextLoaderListener.
 DispatcherServlet – сервлет диспетчера. Этот сервлет анализирует запросы и направляет их соответствующему контроллеру для обработки. В Spring MVC класс DispatcherServlet является центральным сервлетом, который получает запросы и направляет их соответствующим контроллерам. В приложении Spring MVC может существовать произвольное количество экземпляров DispatcherServlet, предназначенных для разных целей (например, для обработки запросов пользовательского интерфейса, запросов веб-служб REST и т.д.). Каждый экземпляр DispatcherServlet имеет собственную конфигурацию WebApplicationContext, которая определяет характеристики уровня сервлета, такие как контроллеры, поддерживающие сервлет, отображение обработчиков, распознавание представлений, интернационализация, оформление темами, проверка достоверности, преобразование типов и форматирование и т.п.
 
@@ -252,6 +251,7 @@ ContextLoaderListener – слушатель при старте и заверш
 <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 </listener>
+
 ### 23. Что такое ViewResolver в Spring?
 ViewResolver – распознаватель представлений. Интерфейс ViewResolver в Spring MVC (из пакета org.springframework.web.servlet) поддерживает распознавание представлений на основе логического имени, возвращаемого контроллером. Для поддержки различных механизмов распознавания представлений предусмотрено множество классов реализации. Например, класс UrlBasedViewResolver поддерживает прямое преобразование логических имен в URL. Класс ContentNegotiatingViewResolver поддерживает динамическое распознавание представлений в зависимости от типа медиа, поддерживаемого клиентом (XML, PDF, JSON и т.д.). Существует также несколько реализаций для интеграции с различными технологиями представлений, такими как FreeMarker (FreeMarkerViewResolver), Velocity (VelocityViewResolver) и JasperReports (JasperReportsViewResolver).
 
@@ -263,13 +263,7 @@ ViewResolver – распознаватель представлений. Инт
               <property name="suffix" value=".jsp" />
        </bean>
 
-<!-- Resolves views selected for rendering by @Controllers to .jsp resources
-           in the /WEB-INF/views directory -->
-       <bean
-               class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-              <property name="prefix" value="/WEB-INF/views/" />
-              <property name="suffix" value=".jsp" />
-       </bean>
+
 InternalResourceViewResolver – реализация ViewResolver, которая позволяет находить представления, которые возвращает контроллер для последующего перехода к нему. Ищет по заданному пути, префиксу, суффиксу и имени.
 
 Дополнительная информация – Spring MVC — описание интерфейса ViewResolver.
@@ -277,21 +271,13 @@ InternalResourceViewResolver – реализация ViewResolver, котора
 ### 24. Что такое MultipartResolver и когда его использовать?
 Интерфейс MultipartResolver используется для загрузки файлов. Существуют две реализации: CommonsMultipartResolver и StandardServletMultipartResolver, которые позволяют фреймворку загружать файлы. По умолчанию этот интерфейс не включается в приложении и необходимо указывать его в файле конфигурации. После настройки любой запрос о загрузке будет отправляться этому интерфейсу.
 
- <beans:bean id="multipartResolver"
-        class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+ <beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
  
-         <!-- setting maximum upload size -->
+  <!-- setting maximum upload size -->
         <beans:property name="maxUploadSize" value="100000" />
  
   </beans:bean>
 
- <beans:bean id="multipartResolver"
-        class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
- 
-         <!-- setting maximum upload size -->
-        <beans:property name="maxUploadSize" value="100000" />
- 
-  </beans:bean>
 Пример – Spring MVC — загрузка файла
 
 ### 25. Как обрабатывать исключения в Spring MVC Framework?
@@ -563,40 +549,8 @@ spring.xml:
  
 </beans>
 
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
- 
-    <bean id="employeeDAO" class="com.journaldev.spring.jdbc.dao.EmployeeDAOImpl">
-        <property name="dataSource" ref="dataSource" />
-    </bean>
-     
-    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
- 
-        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://localhost:3306/TestDB" />
-        <property name="username" value="pankaj" />
-        <property name="password" value="pankaj123" />
-    </bean>
- 
-</beans>
 Пример использования JdbcTemplate:
 
- @Override
-    public void save(Employee employee) {
-        String query = "insert into Employee (id, name, role) values (?,?,?)";
-         
-        JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-         
-        Object[] args = new Object[] {employee.getId(), employee.getName(), employee.getRole()};
-         
-        int out = jdbcTemplate.update(query, args);
-         
-        if(out !=0){
-            System.out.println("Employee saved with id="+employee.getId());
-        }else System.out.println("Employee save failed with id="+employee.getId());
-    }
 
  @Override
     public void save(Employee employee) {
@@ -612,6 +566,7 @@ spring.xml:
             System.out.println("Employee saved with id="+employee.getId());
         }else System.out.println("Employee save failed with id="+employee.getId());
     }
+
 ### 38. Как использовать Tomcat JNDI DataSource в веб-приложении Spring?
 Для использования контейнера сервлетов настроенного на использование JNDI DataSource, необходимо задать соответствующее свойство в файле конфигурации и затем внедрять его как зависимость. Далее мы можем использовать объект JdbcTemplate для выполнения операций с базами данных.
 
@@ -619,10 +574,7 @@ spring.xml:
     <beans:property name="jndiName" value="java:comp/env/jdbc/MyLocalDB"/>
 </beans:bean>
 
-<beans:bean id="dbDataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
-    <beans:property name="jndiName" value="java:comp/env/jdbc/MyLocalDB"/>
-</beans:bean>
-39. Каким образом можно управлять транзакциями в Spring?
+### 39. Каким образом можно управлять транзакциями в Spring?
 Транзакциями в Spring управляют с помощью Declarative Transaction Management (программное управление). Используется аннотация @Transactional для описания необходимости управления транзакцией. В файле конфигурации нужно добавить настройку transactionManager для DataSource.
 
 <bean id="transactionManager"
