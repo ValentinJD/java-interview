@@ -24,7 +24,7 @@
 + [Основы CSS](#Основы-css) ![icon][done]
 + [Основы Web](#Основы-web) ![icon][done]
 + [Дополнительные материалы](#Дополнительные-материалы) ![icon][done]
-
++ [Spring](#Spring) ![icon][done]
 [done]:done.png
 
 ## ООП
@@ -753,6 +753,53 @@
 + [Spring Boot Interview Questions](https://www.baeldung.com/spring-boot-interview-questions)
 + [Top Spring Framework Interview Questions](https://www.baeldung.com/spring-interview-questions)
 + [Spring Interview Questions](https://www.interviewbit.com/spring-interview-questions/)
+
+## Spring
+1. Расскажите о Spring Framework.
+2. Какие некоторые из важных особенностей и преимуществ Spring Framework?
+3. Что вы понимаете под Dependency Injection (DI)?
+4. Как реализуется DI в Spring Framework?
+5. Какие преимущества использования Spring Tool Suite?
+6. Приведите названия некоторых важных Spring модулей.
+7. Что вы понимаете под аспектно-ориентированным программированием (Aspect Oriented Programming — AOP)?
+8. Что такое Aspect, Advice, Pointcut, JoinPoint и Advice Arguments в АОП?
+9. В чем разница между Spring AOP и AspectJ АОП?
+10. Что такое IoC контейнер Spring?
+11. Что такое Spring бин?
+12. Какое значение имеет конфигурационный файл Spring Bean?
+13. Какие различные способы настроить класс как Spring Bean?
+14. Какие вы знаете различные scope у Spring Bean?
+15. Что такое жизненный цикл Spring Bean?
+16. Как получить объекты ServletContext и ServletConfig внутри Spring Bean?
+17. Что такое связывание в Spring и расскажите об аннотации @Autowired?
+18. Какие различные типы автоматического связывания в Spring?
+19. Является ли Spring бин потокобезопасным?
+20. Что такое контроллер в Spring MVC?
+21. Какая разница между аннотациями @Component, @Repository и @Service в Spring?
+22. Расскажите, что вы знаете о DispatcherServlet и ContextLoaderListener.
+23. Что такое ViewResolver в Spring?
+24. Что такое MultipartResolver и когда его использовать?
+25. Как обрабатывать исключения в Spring MVC Framework?
+26. Как создать ApplicationContext в программе Java?
+27. Можем ли мы иметь несколько файлов конфигурации Spring?
+28. Какие минимальные настройки, чтобы создать приложение Spring MVC?
+29. Как бы вы связали Spring MVC Framework и архитектуру MVC?
+30. Как добиться локализации в приложениях Spring MVC?
+31. 31. Как мы можем использовать Spring для создания веб-службы RESTful, возвращающей JSON?
+32. Приведите пример часто используемых аннотаций Spring.
+33. Можем ли мы послать объект как ответ метода обработчика контроллера?
+34. Как загрузить файл в Spring MVC?
+35. Как проверить (валидировать) данные формы в Spring Web MVC Framework?
+36. Что вы знаете Spring MVC Interceptor и как он используется?
+37. Spring JdbcTemplate класс и его применение.
+38. Как использовать Tomcat JNDI DataSource в веб-приложении Spring?
+39. Каким образом можно управлять транзакциями в Spring?
+40. Расскажите о Spring DAO.
+41. Как интегрировать Spring и Hibernate?
+42. Расскажите о Spring Security.
+43. Как внедрить java.util.Properties в Spring Bean?
+44. Назовите некоторые из шаблонов проектирования, используемых в Spring Framework?
+45. Best Practices в Spring Framework.
 
 [к оглавлению](#Вопросы-для-собеседования-на-java-developer)
 
