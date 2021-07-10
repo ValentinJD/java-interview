@@ -800,6 +800,34 @@
 43. Как внедрить java.util.Properties в Spring Bean?
 44. Назовите некоторые из шаблонов проектирования, используемых в Spring Framework?
 45. Best Practices в Spring Framework.
+46. Для чего нужен Component Scan?
+47. Как вы добавите Component Scan в Spring Boot? В чём отличие между @Component и @ComponentScan?
+48. Для чего используется аннотация @Bean?
+49. В чём разница между @Bean и @Component?
+50.  В чём разница между @Component, @Service и @Repository аннотациями?
+51.  Можем ли мы использовать @Component вместо @Service для бизнес логики?
+52.   В чем различие между web.xml и the Spring Context - servlet.xml?
+53.   Что предпочитаете использовать для конфигурации Spring - xml или аннотирование?
+54. Можем ли мы применить @Autowired с не сеттерами и не конструкторами методами?
+55. В чем разница между Сквозной Функциональностью (Cross Cutting Concerns) и АОП (аспектно оринтированное программирование)?
+56. В чем разница между IOC (Inversion of Control) и Application Context?
+57. В чем разница между classPathXmlApplicationContext и annotationConfigApplicationContext?
+58. Почему возвращаемое значение при применении аспекта @Around может потеряться? Назовите причины.
+59. Как вы решаете какой бин инжектить, если у вас несколько подходящих бинов. Расскажите о @Primary и @Qualifier?
+60. Что нового в Spring Framework 5.0?
+61. Сравните Application Context, IOC Container, vs Web Container и EJB Container. Нужен ли Web Container для запуска Spring Boot приложения?
+62. Как мы можем выбрать подходящий бин при помощи application.properties?
+63. Какая минимальная версия Java поддерживается в Spring Boot 2 и Spring 5?
+64. В чём разница между @Controller и @RestController?
+65. Почему иногда мы используем @ResponseBody, а иногда ResponseEntity?
+66. В чем разница между Filters, Listeners and Interceptors?
+67.  В чем разница между ModelMap и ModelAndView?
+68.  В чем разница между model.put() и model.addAttribute()?
+69.  Что можете рассказать про Form Binding?
+70.  Почему мы используем Hibernate Validator?
+71.  Где должны располагаться статические (css, js, html) ресурсы в Spring MVC приложении?
+72.  Почему для конфиденциальных данных рекомендуется использовать POST, а не GET запросы?
+73.  Можно ли передать в запросе один и тот же параметр несколько раз?
 
 [к оглавлению](#Вопросы-для-собеседования-на-java-developer)
 
