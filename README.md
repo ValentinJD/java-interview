@@ -756,6 +756,7 @@
 + [Spring Interview Questions](https://www.interviewbit.com/spring-interview-questions/)
 
 ## Spring
++ [Spring Framework](spring.md)
 1. Расскажите о Spring Framework.
 2. Какие некоторые из важных особенностей и преимуществ Spring Framework?
 3. Что вы понимаете под Dependency Injection (DI)?
@@ -831,6 +832,7 @@
 73.  Можно ли передать в запросе один и тот же параметр несколько раз?
 
 ## Hibernate
++ [Что такое Hibernate Framework?](hibernate.md)
 1. Что такое Hibernate Framework?
 2. Какие важные преимущества дает использование Hibernate Framework?
 3. Какие преимущества Hibernate над JDBC?
