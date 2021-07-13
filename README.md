@@ -25,6 +25,7 @@
 + [Основы Web](#Основы-web) ![icon][done]
 + [Дополнительные материалы](#Дополнительные-материалы) ![icon][done]
 + [Spring](#Spring) ![icon][done]
++ [Hibernate](#Hibernate) ![icon][done]
 [done]:done.png
 
 ## ООП
@@ -804,10 +805,10 @@
 47. Как вы добавите Component Scan в Spring Boot? В чём отличие между @Component и @ComponentScan?
 48. Для чего используется аннотация @Bean?
 49. В чём разница между @Bean и @Component?
-50.  В чём разница между @Component, @Service и @Repository аннотациями?
-51.  Можем ли мы использовать @Component вместо @Service для бизнес логики?
-52.   В чем различие между web.xml и the Spring Context - servlet.xml?
-53.   Что предпочитаете использовать для конфигурации Spring - xml или аннотирование?
+50. В чём разница между @Component, @Service и @Repository аннотациями?
+51. Можем ли мы использовать @Component вместо @Service для бизнес логики?
+52. В чем различие между web.xml и the Spring Context - servlet.xml?
+53. Что предпочитаете использовать для конфигурации Spring - xml или аннотирование?
 54. Можем ли мы применить @Autowired с не сеттерами и не конструкторами методами?
 55. В чем разница между Сквозной Функциональностью (Cross Cutting Concerns) и АОП (аспектно оринтированное программирование)?
 56. В чем разница между IOC (Inversion of Control) и Application Context?
@@ -828,6 +829,52 @@
 71.  Где должны располагаться статические (css, js, html) ресурсы в Spring MVC приложении?
 72.  Почему для конфиденциальных данных рекомендуется использовать POST, а не GET запросы?
 73.  Можно ли передать в запросе один и тот же параметр несколько раз?
+
+## Hibernate
+1. Что такое Hibernate Framework?
+2. Какие важные преимущества дает использование Hibernate Framework?
+3. Какие преимущества Hibernate над JDBC?
+4. Назовите некоторые важные интерфейсы Hibernate.
+5. Что такое конфигурационный файл Hibernate?
+6. Что такое Hibernate mapping file?
+7. Назовите некоторые важные аннотации, используемые для отображения в Hibernate.
+8. Что вы знаете о Hibernate SessionFactory и как его сконфигурировать?
+9. Является ли Hibernate SessionFactory потокобезопасным?
+10. Как получить Hibernate Session и что это такое?
+11. Является ли Hibernate Session потокобезопасным?
+12. В чем разница между openSession и getCurrentSession?
+13. Какая разница между методами Hibernate Session get() и load()?
+14. Что вы знаете о кэшировании в Hibernate? Объясните понятие кэш первого уровня в Hibernate?
+15. Как настроить кэш второго уровня в Hibernate с помощью EHCache?
+16. Какие существуют различные состояния у entity bean?
+17. Как используется вызов метода Hibernate Session merge()?
+18. В чем разница между Hibernate save(), saveOrUpdate() и persist()?
+19. Что произойдет, если будет отсутствовать конструктор без аргументов у Entity Bean?
+20. В чем разница между sorted collection и ordered collection? Какая из них лучше?
+21. Какие типы коллекций в Hibernate вы знаете?
+22. Как реализованы Join’ы Hibernate?
+23. Почему мы не должны делать Entity class как final?
+24. Что вы знаете о HQL и какие его преимущества?
+25. Что такое Query Cache в Hibernate?
+26. Можем ли мы выполнить нативный запрос SQL (sql native) в Hibernate?
+27. Назовите преимущества поддержки нативного sql в Hibernate.
+28. Что такое Named SQL Query?
+29. Какие преимущества Named SQL Query?
+30. Расскажите о преимуществах использования Hibernate Criteria API.
+31. 31. Как логировать созданные Hibernate SQL запросы в лог-файлы?
+32. Что вы знаете о Hibernate прокси и как это помогает в ленивой загрузке (lazy load)?
+33. Как реализованы отношения в Hibernate?
+34. Как управлять транзакциями с помощью Hibernate?
+35. Что такое каскадные связи (обновления) и какие каскадные типы есть в Hibernate?
+36. Как добавить логирование log4j в Hibernate приложение?
+37. Как использовать JNDI DataSource сервера приложений с Hibernate Framework?
+38. Как интегрировать Hibernate и Spring?
+39. Что вы знаете о классе HibernateTemplate?
+40. Как интегрировать Hibernate с Servlet или Struts2 веб приложением?
+41. Какие паттерны применяются в Hibernate?
+42. Расскажите о Hibernate Validator Framework.
+43. Какие преимущества дает использование плагина Hibernate Tools Eclipse?
+44. Best Practices в Hibernate.
 
 [к оглавлению](#Вопросы-для-собеседования-на-java-developer)
 
